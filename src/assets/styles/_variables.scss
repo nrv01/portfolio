@@ -1,0 +1,23 @@
+:root {
+  --color-primary: #7A1CAC;
+  --color-primary-dark: #62108F;
+  --color-primary-light: #AE66D5;
+
+  --background-main: #ffffff;
+  --background-dark: #0f0f10;
+
+  --text-main: #1a1a1a;
+  --text-light: #f6f6f6;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+
+  --transition: 0.25s ease;
+}
+
+$max-width: 1200px;
+$container-padding: 1.5rem;
+
+$shadow-soft: 0 3px 10px rgba(0,0,0,0.1);
+$shadow-hard: 0 6px 20px rgba(0,0,0,0.15);
