@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 import { SvgIconComponent } from 'angular-svg-icon';
 
 @Component({
@@ -8,5 +8,13 @@ import { SvgIconComponent } from 'angular-svg-icon';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  public darkMode: WritableSignal<boolean> = signal(false);
 
+  constructor() {}
+
+  toggleMode() {
+    const newMode = !this.darkMode();
+    this.darkMode.set(newMode);
+    document.documentElement.setAttribute('data-theme', newMode ? 'dark' : 'light');
+  }
 }

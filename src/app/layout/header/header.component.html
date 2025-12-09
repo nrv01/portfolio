@@ -1,19 +1,61 @@
 <header class="w-full">
-  <div class="max-w-[700px] m-auto flex items-center justify-between border-b border-gray-300 px-6 py-4">
-
-    <!-- menú -->
+  <div
+    class="md:max-w-3/4 max-w-full m-auto flex items-center justify-between border-b border-gray-300 px-6 py-4"
+  >
     <nav>
       <ul class="flex gap-6">
-        <li><a class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors" href="#">Home</a></li>
-        <li><a class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors" href="#">Experiences</a></li>
-        <li><a class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors" href="#">Projects</a></li>
-        <li><a class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors" href="#">Skills</a></li>
-        <li><a class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors" href="#">Contact</a></li>
+        <li>
+          <a
+            class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+            href="#"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+            href="#"
+            >Experiences</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+            href="#"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+            href="#"
+            >Skills</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+            href="#"
+            >Contact</a
+          >
+        </li>
       </ul>
     </nav>
-
-
-<svg-icon src="assets/icons/sun.svg" [svgStyle]="{ 'width.px':90 }"></svg-icon>
-
+    <button
+      class="p-2 rounded-full  bg-transparent  hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+      (click)="toggleMode()"
+    >
+      @if (darkMode()) {
+      <svg-icon
+        src="assets/icons/sun.svg"
+        [svgStyle]="{ width: '25px', color: '#facc15' }"
+      ></svg-icon>
+      } @else {
+      <svg-icon
+        src="assets/icons/moon.svg"
+        [svgStyle]="{ width: '25px', color: '#3b82f6' }"
+      ></svg-icon>
+      }
+    </button>
   </div>
 </header>
