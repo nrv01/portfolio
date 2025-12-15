@@ -1,100 +1,97 @@
-<footer class="w-full bg-black text-white dark:bg-white dark:text-black py-8 px-6">
-
-  <!-- CONTENEDOR PRINCIPAL CENTRADO CON MAX 3/4 -->
+<footer class="w-full bg-black text-white dark:bg-white dark:text-black mt-12 py-8 px-6">
   <div class="w-full max-w-full md:max-w-3/4 mx-auto">
-
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-
-      <!-- LEFT -->
       <div class="md:py-4">
         <h2 class="text-2xl font-bold sm:text-3xl">Get in touch</h2>
 
         <p class="mt-4 text-pretty text-gray-400 dark:text-gray-700">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptas delectus alias magni velit!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptas delectus alias magni
+          velit!
         </p>
 
         <dl class="mt-6 space-y-3">
-
           <div>
-            <dd class="grid grid-cols-[24px_1fr] items-center gap-2 text-gray-400 dark:text-gray-700">
-            <svg-icon
-              src="assets/icons/phone.svg"
-              [svgStyle]="{
-                width: '20px',
-                height: '20px',
-                color: 'currentColor'
-              }"
-            ></svg-icon>
+            <dd
+              class="grid grid-cols-[24px_1fr] items-center gap-2 text-gray-400 dark:text-gray-700"
+            >
+              <svg-icon
+                src="assets/icons/phone.svg"
+                [svgStyle]="{
+                  width: '20px',
+                  height: '20px',
+                  color: 'currentColor'
+                }"
+              ></svg-icon>
               <span class="font-medium">+1 (555) 123-4567</span>
             </dd>
           </div>
 
           <div>
-            <dd class="grid grid-cols-[24px_1fr] items-center gap-2 text-gray-400 dark:text-gray-700">
-            <svg-icon
-              src="assets/icons/mail.svg"
-              [svgStyle]="{
-                width: '20px',
-                height: '20px',
-                color: 'currentColor'
-              }"
-            ></svg-icon>
+            <dd
+              class="grid grid-cols-[24px_1fr] items-center gap-2 text-gray-400 dark:text-gray-700"
+            >
+              <svg-icon
+                src="assets/icons/mail.svg"
+                [svgStyle]="{
+                  width: '20px',
+                  height: '20px',
+                  color: 'currentColor'
+                }"
+              ></svg-icon>
               <span class="font-medium">info@example.com</span>
             </dd>
           </div>
 
           <div>
-            <dd class="grid grid-cols-[24px_1fr] items-center gap-2 text-gray-400 dark:text-gray-700">
-            <svg-icon
-              src="assets/icons/map-marker.svg"
-              [svgStyle]="{
-                width: '20px',
-                height: '20px',
-                color: 'currentColor'
-              }"
-            ></svg-icon>
+            <dd
+              class="grid grid-cols-[24px_1fr] items-center gap-2 text-gray-400 dark:text-gray-700"
+            >
+              <svg-icon
+                src="assets/icons/map-marker.svg"
+                [svgStyle]="{
+                  width: '20px',
+                  height: '20px',
+                  color: 'currentColor'
+                }"
+              ></svg-icon>
               <span class="font-medium">123 Main St, Anytown, USA</span>
             </dd>
           </div>
-
         </dl>
       </div>
 
-      <!-- RIGHT -->
-<form action="#" class="space-y-4 p-2">
+      <form action="#" class="space-y-4 p-2">
+        <div>
+          <label class="block text-sm font-medium" for="name">Name</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Your name"
+            class="mt-1 w-full border border-gray-500 dark:border-gray-400 bg-transparent text-white dark:text-black px-3 py-2 focus:outline-none focus:border-white dark:focus:border-black"
+          />
+        </div>
 
-  <div>
-    <label class="block text-sm font-medium" for="name">Name</label>
-    <input
-      id="name"
-      type="text"
-      placeholder="Your name"
-      class="mt-1 w-full border border-gray-500 dark:border-gray-400 bg-transparent text-white dark:text-black px-3 py-2 focus:outline-none focus:border-white dark:focus:border-black"
-    />
-  </div>
+        <div>
+          <label class="block text-sm font-medium" for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Your email"
+            class="mt-1 w-full border border-gray-500 dark:border-gray-400 bg-transparent text-white dark:text-black px-3 py-2 focus:outline-none focus:border-white dark:focus:border-black"
+          />
+        </div>
 
-  <div>
-    <label class="block text-sm font-medium" for="email">Email</label>
-    <input
-      id="email"
-      type="email"
-      placeholder="Your email"
-      class="mt-1 w-full border border-gray-500 dark:border-gray-400 bg-transparent text-white dark:text-black px-3 py-2 focus:outline-none focus:border-white dark:focus:border-black"
-    />
-  </div>
+        <div>
+          <label class="block text-sm font-medium" for="message">Message</label>
+          <textarea
+            id="message"
+            rows="4"
+            placeholder="Your message"
+            class="mt-1 w-full border border-gray-500 dark:border-gray-400 bg-transparent text-white dark:text-black px-3 py-2 resize-none focus:outline-none focus:border-white dark:focus:border-black"
+          ></textarea>
+        </div>
 
-  <div>
-    <label class="block text-sm font-medium" for="message">Message</label>
-    <textarea
-      id="message"
-      rows="4"
-      placeholder="Your message"
-      class="mt-1 w-full border border-gray-500 dark:border-gray-400 bg-transparent text-white dark:text-black px-3 py-2 resize-none focus:outline-none focus:border-white dark:focus:border-black"
-    ></textarea>
-  </div>
-
-  <!-- BUTTON -->
-<a class="group relative inline-block text-sm font-medium" href="#">
+        <a class="group relative inline-block text-sm font-medium" href="#">
           <span
             class="absolute inset-0 translate-x-0 translate-y-0 border border-white dark:border-black transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5"
           ></span>
@@ -114,11 +111,7 @@
             ></svg-icon>
           </span>
         </a>
-
-</form>
-
-
+      </form>
     </div>
-
   </div>
 </footer>
