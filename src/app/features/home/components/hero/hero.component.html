@@ -1,29 +1,41 @@
-<div class="md:max-w-3/4 max-w-full m-auto flex flex-row px-6 py-2 md:min-h-[65vh]" id="home">
-  <!-- Info -->
-  <div class="w-1/2 flex items-center">
+<div
+  class="md:max-w-3/4 max-w-full m-auto flex flex-col md:flex-row
+         px-6 py-8 md:py-2 md:min-h-[65vh] gap-10"
+  id="home"
+>
+  <div class="w-full md:w-1/2 flex items-center text-center md:text-left">
     <div>
-      <small class="text-gray-700 dark:text-gray-400">Hello There</small>
-      <h1 class="text-3xl font-bold text-black dark:text-white">
+      <small class="text-gray-700 dark:text-gray-400 block mb-2">
+        Hello There
+      </small>
+
+      <h1 class="text-3xl md:text-4xl font-bold text-black dark:text-white leading-tight">
         I am Alexander <br />
         FullStack Developer <br />
         Based in Peru
       </h1>
-      <p class="text-gray-700 dark:text-gray-400" style="text-wrap: balanced">
+
+      <p
+        class="text-gray-700 dark:text-gray-400 mt-4 max-w-xl mx-auto md:mx-0"
+        style="text-wrap: balanced"
+      >
         I craft clean, user-friendly digital experiences. From wireframes to code, I bring your
         ideas to life.
       </p>
 
-      <div class="flex gap-4 mt-4">
+      <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center md:justify-start">
         <a class="group relative inline-block text-sm font-medium" href="#">
           <span
-            class="absolute inset-0 translate-x-0 translate-y-0 border border-black dark:border-white transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5"
+            class="absolute inset-0 border border-black dark:border-white
+                   transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5"
           ></span>
 
           <span
-            class="relative flex items-center gap-2 px-8 py-3 bg-white text-black dark:bg-black dark:text-white border border-black dark:border-white transition-colors"
+            class="relative flex items-center gap-2 px-8 py-3
+                   bg-white text-black dark:bg-black dark:text-white
+                   border border-black dark:border-white transition-colors"
           >
             Download CV
-
             <svg-icon
               src="assets/icons/download.svg"
               [svgStyle]="{
@@ -37,25 +49,26 @@
 
         <a class="group relative inline-block text-sm font-medium" href="#">
           <span
-            class="absolute inset-0 translate-x-0 translate-y-0 border border-black dark:border-white transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5"
+            class="absolute inset-0 border border-black dark:border-white
+                   transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5"
           ></span>
 
           <span
-            class="relative flex items-center gap-2 px-8 py-3 bg-white text-black dark:bg-black dark:text-white border border-black dark:border-white transition-colors"
+            class="relative flex items-center gap-2 px-8 py-3
+                   bg-white text-black dark:bg-black dark:text-white
+                   border border-black dark:border-white transition-colors"
           >
             Send Message
           </span>
-
         </a>
       </div>
     </div>
   </div>
 
-  <!-- Illustration -->
-  <div class="w-1/2 flex justify-center items-center">
+  <div class="w-full md:w-1/2 flex justify-center items-center">
     <svg-icon
       src="assets/images/hero-illustration.svg"
-      svgClass="w-90 h-90 text-black dark:text-white"
+      svgClass="w-64 sm:w-80 md:w-96 h-auto text-black dark:text-white"
     ></svg-icon>
   </div>
 </div>

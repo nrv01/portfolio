@@ -1,61 +1,65 @@
-<header class="w-full border-b border-gray-300">
-  <div
-    class="md:max-w-3/4 max-w-full m-auto flex items-center justify-between px-6 py-4"
-  >
+<header class="w-full border-b border-gray-300 dark:border-gray-700">
+  <div class="md:max-w-3/4 max-w-full m-auto flex items-center justify-between px-6 py-4">
     <nav>
-      <ul class="flex gap-6">
-        <li>
-          <a
-            class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
-            href="/#home"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a
-            class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
-            href="/#experience"
-            >Experience</a
-          >
-        </li>
-        <li>
-          <a
-            class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
-            href="/#projects"
-            >Projects</a
-          >
-        </li>
-        <li>
-          <a
-            class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
-            href="/#skills"
-            >Skills</a
-          >
-        </li>
-        <li>
-          <a
-            class="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
-            href="#"
-            >Contact</a
-          >
-        </li>
+      <ul class="hidden md:flex gap-6">
+        <li><a class="text-black dark:text-white" href="/#home">Home</a></li>
+        <li><a class="text-black dark:text-white" href="/#experience">Experience</a></li>
+        <li><a class="text-black dark:text-white" href="/#projects">Projects</a></li>
+        <li><a class="text-black dark:text-white" href="/#skills">Skills</a></li>
+        <li><a class="text-black dark:text-white" href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <button
-      class="p-2 rounded-full  bg-transparent  hover:bg-gray-200 dark:hover:bg-gray-700 transition"
-      (click)="toggleMode()"
-    >
-      @if (darkMode()) {
-      <svg-icon
-        src="assets/icons/sun.svg"
-        [svgStyle]="{ width: '25px', color: '#facc15' }"
-      ></svg-icon>
-      } @else {
-      <svg-icon
-        src="assets/icons/moon.svg"
-        [svgStyle]="{ width: '25px', color: '#3b82f6' }"
-      ></svg-icon>
-      }
-    </button>
+
+    <div class="flex items-center gap-3">
+      <button
+        class="p-2 rounded-full bg-transparent hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+        (click)="toggleMode()"
+      >
+        @if (darkMode()) {
+        <svg-icon
+          src="assets/icons/sun.svg"
+          [svgStyle]="{ width: '25px', color: '#facc15' }"
+        ></svg-icon>
+        } @else {
+        <svg-icon
+          src="assets/icons/moon.svg"
+          [svgStyle]="{ width: '25px', color: '#3b82f6' }"
+        ></svg-icon>
+        }
+      </button>
+<button
+  class="md:hidden p-2 rounded-lg
+         hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+  (click)="toggleMenu()"
+>
+  <svg-icon
+    src="assets/icons/menu.svg"
+    class="text-black dark:text-white"
+    [svgStyle]="{
+      width: '24px',
+      height: '24px',
+      fill: 'currentColor'
+    }"
+  ></svg-icon>
+</button>
+
+    </div>
   </div>
+
+  <nav
+    class="md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-out border-t border-gray-300 dark:border-gray-700"
+    [class.max-h-0]="!menuOpen()"
+    [class.max-h-64]="menuOpen()"
+    [class.opacity-0]="!menuOpen()"
+    [class.opacity-100]="menuOpen()"
+  >
+    <ul class="flex flex-col px-6 py-4 gap-4">
+      <li><a class="text-black dark:text-white" href="/#home">Home</a></li>
+      <li><a class="text-black dark:text-white" href="/#experience">Experience</a></li>
+      <li><a class="text-black dark:text-white" href="/#projects">Projects</a></li>
+      <li><a class="text-black dark:text-white" href="/#projects">Projects</a></li>
+      <li><a class="text-black dark:text-white" href="/#skills">Skills</a></li>
+      <li><a class="text-black dark:text-white" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 </header>

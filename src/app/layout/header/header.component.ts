@@ -9,12 +9,24 @@ import { SvgIconComponent } from 'angular-svg-icon';
 })
 export class HeaderComponent {
   public darkMode: WritableSignal<boolean> = signal(false);
+  public menuOpen: WritableSignal<boolean> = signal(false);
 
   constructor() {}
 
   toggleMode() {
     const newMode = !this.darkMode();
     this.darkMode.set(newMode);
-    document.documentElement.setAttribute('data-theme', newMode ? 'dark' : 'light');
+    document.documentElement.setAttribute(
+      'data-theme',
+      newMode ? 'dark' : 'light'
+    );
+  }
+
+  toggleMenu() {
+    this.menuOpen.update(open => !open);
+  }
+
+  closeMenu() {
+    this.menuOpen.set(false);
   }
 }
