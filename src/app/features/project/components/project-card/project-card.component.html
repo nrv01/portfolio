@@ -1,1 +1,91 @@
-<p>project-card works!</p>
+@if (project(); as p) {
+  <div class="m-0">
+    <div class="w-full m-0 p-0">
+      <img
+        [src]="p.imageUrl"
+        [alt]="p.name"
+        class="w-full h-auto block m-0 p-0 rounded-t-2xl object-cover"
+      />
+    </div>
+
+    <div class="border border-gray-200 dark:border-gray-700 p-4 rounded-b-2xl flex flex-col h-full">
+      <h4 class="font-semibold mb-2">
+        {{ p.name }}
+      </h4>
+
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
+        {{ p.description }}
+      </p>
+
+      @if (p.tags.length) {
+        <div class="flex flex-wrap gap-2 mb-3">
+          @for (tag of p.tags; track $index) {
+            <span
+              class="bg-gray-100 dark:bg-gray-800
+                     rounded-full px-3 py-1
+                     text-sm font-semibold
+                     text-gray-600 dark:text-gray-300"
+            >
+              {{ tag }}
+            </span>
+          }
+        </div>
+      }
+
+      <div class="w-full flex justify-end gap-3 mt-auto">
+        @if (p.repoUrl) {
+          <a
+            [href]="p.repoUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View project on GitHub"
+            class="inline-flex items-center gap-2
+                   px-4 py-2 text-sm font-medium
+                   rounded-xl border
+                   border-gray-300 dark:border-gray-700
+                   text-gray-700 dark:text-gray-300
+                   hover:border-black dark:hover:border-white
+                   hover:text-black dark:hover:text-white
+                   transition-colors"
+          >
+            <span>GitHub</span>
+            <svg-icon
+              src="assets/icons/github.svg"
+              [svgStyle]="{
+                width: '18px',
+                height: '18px',
+                color: 'currentColor'
+              }"
+            ></svg-icon>
+          </a>
+        }
+
+        @if (p.liveUrl) {
+          <a
+            [href]="p.liveUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View live demo"
+            class="inline-flex items-center gap-2
+                   px-4 py-2 text-sm font-medium
+                   rounded-xl
+                   bg-black text-white
+                   dark:bg-white dark:text-black
+                   hover:bg-gray-800 dark:hover:bg-gray-200
+                   transition-colors"
+          >
+            <span>Live Demo</span>
+            <svg-icon
+              src="assets/icons/external-link.svg"
+              [svgStyle]="{
+                width: '18px',
+                height: '18px',
+                color: 'currentColor'
+              }"
+            ></svg-icon>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+}
