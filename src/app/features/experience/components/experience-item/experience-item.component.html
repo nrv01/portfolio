@@ -1,0 +1,45 @@
+<div class="grid grid-cols-12 gap-6 items-start">
+  <div class="col-span-12 md:col-span-6">
+    <div class="flex items-center gap-4">
+      <img
+        [src]="experience().logoUrl"
+        [alt]="experience().company + ' logo'"
+        class="w-12 h-12 rounded-xl object-cover"
+      />
+      <div>
+        <h4 class="text-xl md:text-2xl font-extrabold text-gray-700 dark:text-gray-400">
+          {{ experience().company }}
+        </h4>
+        <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+          {{ experience().startDate }} –
+          {{ experience().currentWorkplace ? 'Present' : experience().endDate }} •
+          {{ experience().location }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-span-12 md:col-span-6">
+    <h5 class="text-lg font-semibold text-gray-700 dark:text-gray-400">
+      {{ experience().role }}
+    </h5>
+
+    <p class="mt-2 text-gray-700 dark:text-gray-300">
+      {{ experience().description }}
+    </p>
+
+    <ul class="mt-3 list-disc ml-5 space-y-1 text-gray-600 dark:text-gray-400">
+      @for(achievement of experience().achievements; track $index) {
+      <li>{{ achievement }}</li>
+      }
+    </ul>
+
+    <div class="mt-4 mb-8 flex flex-wrap gap-2">
+      @for(technology of experience().technologies; track $index) {
+      <span class="bg-gray-100 dark:bg-gray-800 dark:text-white rounded-full px-3 py-1 text-sm font-semibold text-gray-600">{{
+        technology
+      }}</span>
+      }
+    </div>
+  </div>
+</div>
